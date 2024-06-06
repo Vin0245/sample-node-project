@@ -19,5 +19,5 @@ app.get("/hearbeat", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://autocheck with webhook:${PORT}`);
+  console.log(`Server running at http://autocheck with webhook final check:${PORT}`);
 });
