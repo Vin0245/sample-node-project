@@ -19,5 +19,5 @@ app.get("/hearbeat", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://check with new webhook handler automatic port check:${PORT}`);
+  console.log(`Server running at http://check with new webhook handler automatic port checking:${PORT}`);
 });
