@@ -15,7 +15,7 @@ app.use(express.json());
 const PORT = 4000;
 
 app.get("/hearbeat", async (req, res) => {
-  return res.send({ message: "OK" });
+  return res.send({ message: "OK done" });
 });
 
 app.listen(PORT, () => {
