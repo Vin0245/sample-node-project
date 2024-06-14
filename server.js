@@ -1,36 +1,23 @@
-const AWS = require('aws-sdk');
-const lambda = new AWS.Lambda();
-const { URL } = require('url');
+const express = require("express");
+// const puppeteer = require("puppeteer");
+const cors = require("cors");
+const fs = require("fs");
+const path = require("path");
+const app = express();
+const port = 3001;
 
-exports.handler = async (event, context) => {
-    let response;
-    try {
-        switch (event.httpMethod) {
-            case 'GET':
-                if (event.path === '/hearbeat') {
-                    response = {
-                        statusCode: 200,
-                        body: JSON.stringify({ message: 'OK' })
-                    };
-                } else {
-                    response = {
-                        statusCode: 404,
-                        body: JSON.stringify({ message: 'Not Found' })
-                    };
-                }
-                break;
-            default:
-                response = {
-                    statusCode: 405,
-                    body: JSON.stringify({ message: 'Method Not Allowed' })
-                };
-        }
-    } catch (err) {
-        console.error(err);
-        response = {
-            statusCode: 500,
-            body: JSON.stringify({ message: 'Internal Server Error' })
-        };
-    }
-    return response;
-};
+app.use(cors());
+app.use(express.json());
+
+app.use(cors());
+app.use(express.json());
+
+const PORT = 4000;
+
+app.get("/hearbeat", async (req, res) => {
+  return res.send({ message: "OK" });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running at http://check with rolling update completely with webhook test-17:${PORT}`);
+});
