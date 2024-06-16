@@ -1,17 +1,18 @@
 {
-  "name": "homepage-screenshot-service",
+  "name": "codedevops",
   "version": "1.0.0",
-  "description": "",
+  "description": "![CICD](docs/cicd2.png)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "prom-client": "^15.1.2"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }
