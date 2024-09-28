@@ -12,7 +12,7 @@ const app = express();
 
 // Define the route for the root path ("/")
 app.get('/', (req, res) => {
-    const sentence = 'Welcome to the CICD Automation with cloudbyvin checking success with cicd ';
+    const sentence = 'Welcome to the CICD Automation with coursevita checking success with cicd ';
 
     // Send the sentence as the response
     res.json({ sentence });
